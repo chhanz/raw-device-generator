@@ -41,7 +41,7 @@ MIDSTD="\",RUN+=\"/usr/bin/raw /dev/raw/raw"
 BACKSTD=" %N\""
 ENDSTD="ACTION==\"add\", KERNEL==\"raw*\", OWNER=\"grid\", GROUP=\"dba\", MODE=\"0660\""
 
-echo "# RawGenerator - 60-raw.rules  > $GENFILE
+echo "# RawGenerator - 60-raw.rules"  > $GENFILE
 echo "# Make . chhanz " >> $GENFILE
 echo " " >> $GENFILE
 cat /tmp/mpath_uuid_$DATE.txt | awk '{print "ACTION==\"add|change\",ENV{DM_UUID}==\""$3"\",RUN+=\"/usr/bin/raw /dev/raw/raw"$1" %N\""}' >> $GENFILE
